@@ -1,0 +1,238 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block content %}
+  <!-- Page Wrapper -->
+  <div class="page-wrapper">
+    <div class="content">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- Page Header -->
+          {% block pagetitle %}
+            {% include 'partials/page-title.html' with title='Project Dashboard' %}
+          {% endblock %}
+          <!-- /Page Header -->
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-7">
+          <div class="card">
+            <div class="card-header border-0 pb-0">
+              <div class="d-flex align-items-center justify-content-between flex-wrap row-gap-3">
+                <h4><i class="ti ti-grip-vertical me-1"></i>Recent Projects</h4>
+                <div class="d-flex align-items-center flex-wrap row-gap-3">
+                  <div class="dropdown me-2">
+                    <a class="dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);"><i class="ti ti-calendar-check me-2"></i>Last 7 days</a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a href="javascript:void(0);" class="dropdown-item">Last 15 days</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Last 30 days</a>
+                    </div>
+                  </div>
+                  <a class="btn btn-primary" href="javascript:void(0);" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_add"><i class="ti ti-square-rounded-plus me-1"></i>Add Project</a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive custom-table">
+                <table class="table">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Priority</th>
+                      <th>Name</th>
+                      <th>Client</th>
+                      <th>Due Date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="odd">
+                      <td>
+                        <h2 class="d-flex align-items-center"><a href="project-details" class="avatar avatar-sm border me-2"><img class="w-auto h-auto" src="{% static 'assets/img/priority/truellysel.svg' %}" alt="User Image" /></a><a href="project-details">Truelysell</a></h2>
+                      </td>
+                      <td>
+                        <h2 class="d-flex align-items-center"><a href="company-details" class="avatar avatar-sm border me-2"><img class="w-auto h-auto" src="{% static 'assets/img/icons/company-icon-01.svg' %}" alt="User Image" /></a><a href="company-details">NovaWave LLC</a></h2>
+                      </td>
+                      <td>
+                        <span class="d-flex align-items-center badge badge-pill bg-light-danger"><span class="badge-dots"></span> High</span>
+                      </td>
+                      <td>15 Oct 2023</td>
+                    </tr>
+                    <tr class="even">
+                      <td>
+                        <h2 class="d-flex align-items-center"><a href="project-details" class="avatar avatar-sm border me-2"><img class="w-auto h-auto" src="{% static 'assets/img/priority/dreamchat.svg' %}" alt="User Image" /></a><a href="project-details">Dreamschat</a></h2>
+                      </td>
+                      <td>
+                        <h2 class="d-flex align-items-center"><a href="company-details" class="avatar avatar-sm border me-2"><img class="w-auto h-auto" src="{% static 'assets/img/icons/company-icon-02.svg' %}" alt="User Image" /></a><a href="company-details">BlueSky Industries</a></h2>
+                      </td>
+                      <td>
+                        <span class="d-flex align-items-center badge badge-pill bg-light-warning"><span class="badge-dots"></span> Medium</span>
+                      </td>
+                      <td>22 Oct 2023</td>
+                    </tr>
+                    <tr class="odd">
+                      <td>
+                        <h2 class="d-flex align-items-center"><a href="project-details" class="avatar avatar-sm border me-2"><img class="w-auto h-auto" src="{% static 'assets/img/priority/truellysell.svg' %}" alt="User Image" /></a><a href="project-details">Truelysell</a></h2>
+                      </td>
+                      <td>
+                        <h2 class="d-flex align-items-center"><a href="company-details" class="avatar avatar-sm border me-2"><img class="w-auto h-auto" src="{% static 'assets/img/icons/company-icon-03.svg' %}" alt="User Image" /></a><a href="company-details">SilverHawk</a></h2>
+                      </td>
+                      <td>
+                        <span class="d-flex align-items-center badge badge-pill bg-light-danger"><span class="badge-dots"></span> High</span>
+                      </td>
+                      <td>27 Oct 2023</td>
+                    </tr>
+                    <tr class="even">
+                      <td>
+                        <h2 class="d-flex align-items-center"><a href="project-details" class="avatar avatar-sm border me-2"><img class="w-auto h-auto" src="{% static 'assets/img/priority/servbook.svg' %}" alt="User Image" /></a><a href="project-details">Servbook</a></h2>
+                      </td>
+                      <td>
+                        <h2 class="d-flex align-items-center"><a href="company-details" class="avatar avatar-sm border me-2"><img class="w-auto h-auto" src="{% static 'assets/img/icons/company-icon-04.svg' %}" alt="User Image" /></a><a href="company-details">SummitPeak</a></h2>
+                      </td>
+                      <td>
+                        <span class="d-flex align-items-center badge badge-pill bg-light-danger"><span class="badge-dots"></span> High</span>
+                      </td>
+                      <td>01 Oct 2023</td>
+                    </tr>
+                    <tr class="odd">
+                      <td>
+                        <h2 class="d-flex align-items-center"><a href="project-details" class="avatar avatar-sm border me-2"><img class="w-auto h-auto" src="{% static 'assets/img/priority/dream-pos.svg' %}" alt="User Image" /></a><a href="project-details">DreamPOS</a></h2>
+                      </td>
+                      <td>
+                        <h2 class="d-flex align-items-center"><a href="company-details" class="avatar avatar-sm border me-2"><img class="w-auto h-auto" src="{% static 'assets/img/icons/company-icon-05.svg' %}" alt="User Image" /></a><a href="company-details">RiverStone Ventur</a></h2>
+                      </td>
+                      <td>
+                        <span class="d-flex align-items-center badge badge-pill bg-light-warning"><span class="badge-dots"></span> Medium</span>
+                      </td>
+                      <td>06 Oct 2023</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 d-flex">
+          <div class="card w-100">
+            <div class="card-header border-0 pb-0">
+              <div class="d-flex align-items-center justify-content-between flex-wrap row-gap-3">
+                <h4><i class="ti ti-grip-vertical me-1"></i>Project By Stage</h4>
+                <div class="dropdown">
+                  <a class="dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);"><i class="ti ti-calendar-check me-2"></i>Last 30 days</a>
+                  <div class="dropdown-menu dropdown-menu-end">
+                    <a href="javascript:void(0);" class="dropdown-item">Last 15 days</a>
+                    <a href="javascript:void(0);" class="dropdown-item">Last 30 days</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div id="contacts-analysis"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 d-flex">
+          <div class="card w-100">
+            <div class="card-header border-0 pb-0">
+              <div class="d-flex align-items-center justify-content-between flex-wrap row-gap-3">
+                <h4><i class="ti ti-grip-vertical me-1"></i>Projects By Stage</h4>
+                <div class="d-flex align-items-center flex-wrap row-gap-2">
+                  <div class="dropdown me-2">
+                    <a class="dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);">Sales Pipeline</a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a href="javascript:void(0);" class="dropdown-item">Marketing Pipeline</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Sales Pipeline</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Email</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Chats</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Operational</a>
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <a class="dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);">Last 3 months</a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a href="javascript:void(0);" class="dropdown-item">Last 30 Days</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Last 15 Days</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Last 7 Days</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div id="project-stage"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header border-0 pb-0">
+              <div class="d-flex align-items-center justify-content-between flex-wrap row-gap-3">
+                <h4><i class="ti ti-grip-vertical me-1"></i>Leads By Stage</h4>
+                <div class="d-flex align-items-center flex-wrap row-gap-2">
+                  <div class="dropdown me-2">
+                    <a class="dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);">Marketing Pipeline</a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a href="javascript:void(0);" class="dropdown-item">Marketing Pipeline</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Sales Pipeline</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Email</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Chats</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Operational</a>
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <a class="dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);">Last 3 months</a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a href="javascript:void(0);" class="dropdown-item">Last 30 Days</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Last 15 Days</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Last 7 Days</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div id="last-chart"></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header border-0 pb-0">
+              <div class="d-flex align-items-center justify-content-between flex-wrap row-gap-3">
+                <h4><i class="ti ti-grip-vertical me-1"></i>Won Deals Stage</h4>
+                <div class="d-flex align-items-center flex-wrap row-gap-2">
+                  <div class="dropdown me-2">
+                    <a class="dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);">Marketing Pipeline</a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a href="javascript:void(0);" class="dropdown-item">Marketing Pipeline</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Sales Pipeline</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Email</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Chats</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Operational</a>
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <a class="dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);">Last 3 months</a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a href="javascript:void(0);" class="dropdown-item">Last 30 Days</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Last 15 Days</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Last 7 Days</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div id="won-chart"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Page Wrapper -->
+
+  {% block project_dashboard_modal %}
+    {% include 'pages/modal/project-dashboard-modal.html' %}
+  {% endblock %}
+{% endblock %}

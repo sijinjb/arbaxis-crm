@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  {% block head %}
+    {% include 'partials/head.html' %}
+  {% endblock %}
+
+  <body class="{% if request.path == '/crms/template/coming-soon' %}
+       comming-soon bg-white
+    {% elif request.path == '/crms/template/under-maintenance' %}
+       error-page
+    {% else %}
+       account-page
+    {% endif %}">
+    <div class="main-wrapper">
+      {% block content %}
+
+      {% endblock %}
+    </div>
+
+    {% block javascript %}
+      {% include 'partials/script.html' %}
+    {% endblock %}
+  </body>
+</html>

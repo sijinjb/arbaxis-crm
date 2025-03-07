@@ -1,0 +1,212 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block content %}
+  <!-- Page Wrapper -->
+  <div class="page-wrapper">
+    <div class="content">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- Page Header -->
+          {% block pagetitle %}
+            {% include 'partials/page-title.html' with title='Leads Dashboard' %}
+          {% endblock %}
+          <!-- /Page Header -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-7">
+          <div class="card">
+            <div class="card-header border-0 pb-0">
+              <div class="d-flex align-items-center justify-content-between flex-wrap row-gap-3">
+                <h4><i class="ti ti-grip-vertical me-1"></i>Recently Created Leads</h4>
+                <div class="dropdown">
+                  <a class="dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);"><i class="ti ti-calendar-check me-2"></i>Last 30 days</a>
+                  <div class="dropdown-menu dropdown-menu-end">
+                    <a href="javascript:void(0);" class="dropdown-item">Last 15 days</a>
+                    <a href="javascript:void(0);" class="dropdown-item">Last 30 days</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive custom-table">
+                <table class="table dataTable" id="lead-project">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Lead Name</th>
+                      <th>Company Name</th>
+                      <th>Phone</th>
+                      <th>Lead Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="odd">
+                      <td>Collins</td>
+                      <td>
+                        <h2 class="d-flex align-items-center"><a href="company-details" class="avatar avatar-sm border me-2"><img class="w-auto h-auto" src="{% static 'assets/img/icons/company-icon-01.svg' %}" alt="User Image" /></a><a href="company-details" class="d-flex flex-column">NovaWave LLC<span class="text-default">Newyork, USA</span></a></h2>
+                      </td>
+                      <td>+1 875455453</td>
+                      <td>
+                        <span class="badge badge-pill bg-pending">Not Contacted</span>
+                      </td>
+                    </tr>
+                    <tr class="even">
+                      <td>Konopelski</td>
+                      <td>
+                        <h2 class="d-flex align-items-center"><a href="company-details" class="avatar avatar-sm border me-2"><img class="w-auto h-auto" src="{% static 'assets/img/icons/company-icon-02.svg' %}" alt="User Image" /></a><a href="company-details" class="d-flex flex-column">BlueSky Industries<span class="text-default">Winchester, KY</span></a></h2>
+                      </td>
+                      <td>+1 989757485</td>
+                      <td>
+                        <span class="badge badge-pill bg-warning">Contacted</span>
+                      </td>
+                    </tr>
+                    <tr class="odd">
+                      <td>Adams</td>
+                      <td>
+                        <h2 class="d-flex align-items-center"><a href="company-details" class="avatar avatar-sm border me-2"><img class="w-auto h-auto" src="{% static 'assets/img/icons/company-icon-03.svg' %}" alt="User Image" /></a><a href="company-details" class="d-flex flex-column">SilverHawk<span class="text-default">Jametown, NY</span></a></h2>
+                      </td>
+                      <td>+1 546555455</td>
+                      <td>
+                        <span class="badge badge-pill bg-warning">Contacted</span>
+                      </td>
+                    </tr>
+                    <tr class="even">
+                      <td>Schumm</td>
+                      <td>
+                        <h2 class="d-flex align-items-center"><a href="company-details" class="avatar avatar-sm border me-2"><img class="w-auto h-auto" src="{% static 'assets/img/icons/company-icon-04.svg' %}" alt="User Image" /></a><a href="company-details" class="d-flex flex-column">SummitPeak<span class="text-default">Compton, RI</span></a></h2>
+                      </td>
+                      <td>+1 454478787</td>
+                      <td>
+                        <span class="badge badge-pill bg-pending">Not Contacted</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 d-flex">
+          <div class="card w-100">
+            <div class="card-header border-0 pb-0">
+              <div class="d-flex align-items-center justify-content-between flex-wrap row-gap-3">
+                <h4><i class="ti ti-grip-vertical me-1"></i>Projects By Stage</h4>
+                <div class="dropdown">
+                  <a class="dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);">Last 30 Days</a>
+                  <div class="dropdown-menu dropdown-menu-end">
+                    <a href="javascript:void(0);" class="dropdown-item">Last 30 Days</a>
+                    <a href="javascript:void(0);" class="dropdown-item">Last 15 Days</a>
+                    <a href="javascript:void(0);" class="dropdown-item">Last 7 Days</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div id="leadpiechart"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 d-flex">
+          <div class="card w-100">
+            <div class="card-header border-0 pb-0">
+              <div class="d-flex align-items-center justify-content-between flex-wrap row-gap-3">
+                <h4><i class="ti ti-grip-vertical me-1"></i>Projects By Stage</h4>
+                <div class="d-flex align-items-center flex-wrap row-gap-2">
+                  <div class="dropdown me-2">
+                    <a class="dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);">Sales Pipeline</a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a href="javascript:void(0);" class="dropdown-item">Marketing Pipeline</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Sales Pipeline</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Email</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Chats</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Operational</a>
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <a class="dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);">Last 30 Days</a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a href="javascript:void(0);" class="dropdown-item">Last 30 Days</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Last 15 Days</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Last 7 Days</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div id="contact-report"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header border-0 pb-0">
+              <div class="d-flex align-items-center justify-content-between flex-wrap row-gap-3">
+                <h4><i class="ti ti-grip-vertical me-1"></i>Leads By Stage</h4>
+                <div class="d-flex align-items-center flex-wrap row-gap-2">
+                  <div class="dropdown me-2">
+                    <a class="dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);">Marketing Pipeline</a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a href="javascript:void(0);" class="dropdown-item">Marketing Pipeline</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Sales Pipeline</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Email</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Chats</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Operational</a>
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <a class="dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);">Last 3 months</a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a href="javascript:void(0);" class="dropdown-item">Last 3 months</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Last 6 months</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Last 12 months</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div id="last-chart"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header border-0 pb-0">
+              <div class="d-flex align-items-center justify-content-between flex-wrap row-gap-3">
+                <h4><i class="ti ti-grip-vertical me-1"></i>Won Deals Stage</h4>
+                <div class="d-flex align-items-center flex-wrap row-gap-2">
+                  <div class="dropdown me-2">
+                    <a class="dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);">Marketing Pipeline</a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a href="javascript:void(0);" class="dropdown-item">Marketing Pipeline</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Sales Pipeline</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Email</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Chats</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Operational</a>
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <a class="dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);">Last 3 months</a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a href="javascript:void(0);" class="dropdown-item">Last 3 months</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Last 6 months</a>
+                      <a href="javascript:void(0);" class="dropdown-item">Last 12 months</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div id="won-chart"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Page Wrapper -->
+{% endblock %}

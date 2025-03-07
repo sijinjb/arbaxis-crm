@@ -1,0 +1,1056 @@
+{% load static %}
+{% block header %}
+  <!-- Header -->
+  <div class="header">
+    <!-- Logo -->
+    <div class="header-left active">
+      <a href="index" class="logo logo-normal">
+        <img src="{% static 'assets/img/logo.svg' %}" alt="Logo" />
+        <img src="{% static 'assets/img/white-logo.svg' %}" class="white-logo" alt="Logo" />
+      </a>
+      <a href="index" class="logo-small"><img src="{% static 'assets/img/logo-small.svg' %}" alt="Logo" /></a>
+      <a id="toggle_btn" href="javascript:void(0);"><i class="ti ti-arrow-bar-to-left"></i></a>
+    </div>
+    <!-- /Logo -->
+
+    <a id="mobile_btn" class="mobile_btn" href="#sidebar">
+      <span class="bar-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </a>
+
+    <div class="header-user">
+      <ul class="nav user-menu">
+        <!-- Search -->
+        <li class="nav-item nav-search-inputs me-auto">
+          <div class="top-nav-search">
+            <a href="javascript:void(0);" class="responsive-search"><i class="fa fa-search"></i></a>
+            <form action="#" class="dropdown">
+              <div class="searchinputs" id="dropdownMenuClickable">
+                <input type="text" placeholder="Search" />
+                <div class="search-addon">
+                  <button type="submit"><i class="ti ti-command"></i></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </li>
+        <!-- /Search -->
+
+        <!-- Horizontal Single -->
+        <li>
+          <div class="sidebar sidebar-horizontal" id="horizontal-single">
+            <div class="sidebar-menu">
+              <div class="main-menu">
+                <ul class="nav-menu">
+                  <li class="menu-title">
+                    <span>Main</span>
+                  </li>
+                  <li class="submenu">
+                    <a href="javascript:void(0);" class="active"><i class="ti ti-layout-2"></i><span>Dashboard</span><span class="menu-arrow"></span></a>
+                    <ul>
+                      <li>
+                        <a href="index" class="active">Deals Dashboard</a>
+                      </li>
+                      <li>
+                        <a href="leads-dashboard">Leads Dashboard</a>
+                      </li>
+                      <li>
+                        <a href="project-dashboard">Project Dashboard</a>
+                      </li>
+                      <li class="submenu">
+                        <a href="#">
+                          <i class="ti ti-user-star"></i><span>Super Admin</span>
+                          <span class="menu-arrow"></span>
+                        </a>
+                        <ul>
+                          <li>
+                            <a href="dashboard">Dashboard</a>
+                          </li>
+                          <li>
+                            <a href="company">Companies</a>
+                          </li>
+                          <li>
+                            <a href="subscription">Subscriptions</a>
+                          </li>
+                          <li>
+                            <a href="packages">Packages</a>
+                          </li>
+                          <li>
+                            <a href="domain">Domain</a>
+                          </li>
+                          <li>
+                            <a href="purchase-transaction">Purchase Transaction</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="submenu">
+                    <a href="javascript:void(0);">
+                      <i class="ti ti-brand-airtable"></i><span>Application</span>
+                      <span class="menu-arrow"></span>
+                    </a>
+                    <ul>
+                      <li>
+                        <a href="chat">Chat</a>
+                      </li>
+                      <li class="submenu submenu-two">
+                        <a href="javascript:void(0);">Call<span class="menu-arrow inside-submenu"></span></a>
+                        <ul>
+                          <li>
+                            <a href="video-call">Video Call</a>
+                          </li>
+                          <li>
+                            <a href="audio-call">Audio Call</a>
+                          </li>
+                          <li>
+                            <a href="call-history">Call History</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="calendar">Calendar</a>
+                      </li>
+                      <li>
+                        <a href="email">Email</a>
+                      </li>
+                      <li>
+                        <a href="todo">To Do</a>
+                      </li>
+                      <li>
+                        <a href="notes">Notes</a>
+                      </li>
+                      <li>
+                        <a href="file-manager">File Manager</a>
+                      </li>
+                      <li>
+                        <a href="social-feed">Social Feed</a>
+                      </li>
+                      <li>
+                        <a href="kanban-view">Kanban</a>
+                      </li>
+                      <li>
+                        <a href="invoice">Invoices</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="submenu">
+                    <a href="javascript:void(0);"><i class="ti ti-layout-2"></i><span>layouts</span><span class="menu-arrow"></span></a>
+                    <ul>
+                      <li>
+                        <a href="layout-mini">Mini</a>
+                      </li>
+                      <li>
+                        <a href="layout-horizontal-single">Horizontal Single</a>
+                      </li>
+                      <li>
+                        <a href="layout-without-header">Without Header</a>
+                      </li>
+                      <li>
+                        <a href="layout-rtl">RTL</a>
+                      </li>
+                      <li>
+                        <a href="layout-detached">Detached</a>
+                      </li>
+                      <li>
+                        <a href="layout-dark">Dark</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="submenu">
+                    <a href="#">
+                      <i class="ti ti-ti ti-user-up"></i><span>Crm</span>
+                      <span class="menu-arrow"></span>
+                    </a>
+                    <ul>
+                      <li>
+                        <a href="contacts"><span>Contacts</span></a>
+                      </li>
+                      <li>
+                        <a href="companies"><span>Companies</span></a>
+                      </li>
+                      <li>
+                        <a href="deals"><span>Deals</span></a>
+                      </li>
+                      <li>
+                        <a href="leads"><span>Leads</span></a>
+                      </li>
+                      <li>
+                        <a href="pipeline"><span>Pipeline</span></a>
+                      </li>
+                      <li>
+                        <a href="campaign"><span>Campaign</span></a>
+                      </li>
+                      <li>
+                        <a href="projects"><span>Projects</span></a>
+                      </li>
+                      <li>
+                        <a href="tasks"><span>Tasks</span></a>
+                      </li>
+                      <li>
+                        <a href="proposals"><span>Proposals</span></a>
+                      </li>
+                      <li>
+                        <a href="contracts"><span>Contracts</span></a>
+                      </li>
+                      <li>
+                        <a href="estimations"><span>Estimations</span></a>
+                      </li>
+                      <li>
+                        <a href="invoices"><span>Invoices</span></a>
+                      </li>
+                      <li>
+                        <a href="payments"><span>Payments</span></a>
+                      </li>
+                      <li>
+                        <a href="analytics"><span>Analytics</span></a>
+                      </li>
+                      <li>
+                        <a href="activities"><span>Activities</span></a>
+                      </li>
+                      <li class="submenu">
+                        <a href="#">
+                          <span>Crm Settings</span>
+                          <span class="menu-arrow"></span>
+                        </a>
+                        <ul>
+                          <li>
+                            <a href="sources"><span>Sources</span></a>
+                          </li>
+                          <li>
+                            <a href="lost-reason"><span>Lost Reason</span></a>
+                          </li>
+                          <li>
+                            <a href="contact-stage"><span>Contact Stage</span></a>
+                          </li>
+                          <li>
+                            <a href="industry"><span>Industry</span></a>
+                          </li>
+                          <li>
+                            <a href="calls"><span>Calls</span></a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="submenu">
+                    <a href="#">
+                      <i class="ti ti-file-invoice"></i><span>Reports</span>
+                      <span class="menu-arrow"></span>
+                    </a>
+                    <ul>
+                      <li>
+                        <a href="lead-reports">Lead Reports</a>
+                      </li>
+                      <li>
+                        <a href="deal-reports">Deal Reports</a>
+                      </li>
+                      <li>
+                        <a href="contact-reports">Contact Reports</a>
+                      </li>
+                      <li>
+                        <a href="company-reports">Company Reports</a>
+                      </li>
+                      <li>
+                        <a href="project-reports">Project Reports</a>
+                      </li>
+                      <li>
+                        <a href="task-reports">Task Reports</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="submenu">
+                    <a href="#">
+                      <i class="ti ti-page-break"></i><span>Pages</span>
+                      <span class="menu-arrow"></span>
+                    </a>
+                    <ul>
+                      <li>
+                        <a href="manage-users"><span>Manage Users</span></a>
+                      </li>
+                      <li>
+                        <a href="roles-permissions"><span>Roles & Permissions</span></a>
+                      </li>
+                      <li>
+                        <a href="delete-request"><span>Delete Request</span></a>
+                      </li>
+                      <li class="submenu">
+                        <a href="javascript:void(0);"><span>Membership</span><span class="menu-arrow"></span></a>
+                        <ul>
+                          <li>
+                            <a href="membership-plans">Membership Plans</a>
+                          </li>
+                          <li>
+                            <a href="membership-addons">Membership Addons</a>
+                          </li>
+                          <li>
+                            <a href="membership-transactions">Transactions</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="submenu">
+                        <a href="javascript:void(0);"><span>Location</span><span class="menu-arrow"></span></a>
+                        <ul>
+                          <li>
+                            <a href="countries">Countries</a>
+                          </li>
+                          <li>
+                            <a href="states">States</a>
+                          </li>
+                          <li>
+                            <a href="cities">Cities</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="testimonials"><span>Testimonials</span></a>
+                      </li>
+                      <li>
+                        <a href="faq"><span>FAQ</span></a>
+                      </li>
+                      <li>
+                        <a href="contact-messages"><span>Contact Messages</span></a>
+                      </li>
+                      <li>
+                        <a href="tickets"><span>Tickets</span></a>
+                      </li>
+                      <li class="submenu">
+                        <a href="javascript:void(0);"><span>Authentication</span><span class="menu-arrow"></span></a>
+                        <ul>
+                          <li>
+                            <a href="login">Login</a>
+                          </li>
+                          <li>
+                            <a href="register">Register</a>
+                          </li>
+                          <li>
+                            <a href="forgot-password">Forgot Password</a>
+                          </li>
+                          <li>
+                            <a href="reset-password">Reset Password</a>
+                          </li>
+                          <li>
+                            <a href="email-verification">Email Verification</a>
+                          </li>
+                          <li>
+                            <a href="two-step-verification">2 Step Verification</a>
+                          </li>
+                          <li>
+                            <a href="lock-screen">Lock Screen</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="submenu">
+                        <a href="javascript:void(0);"><span>Error Pages</span><span class="menu-arrow"></span></a>
+                        <ul>
+                          <li>
+                            <a href="error-404">404 Error</a>
+                          </li>
+                          <li>
+                            <a href="error-500">500 Error</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="blank-page"><span>Blank Page</span></a>
+                      </li>
+                      <li>
+                        <a href="coming-soon"><span>Coming Soon</span></a>
+                      </li>
+                      <li>
+                        <a href="under-maintenance"><span>Under Maintenance</span></a>
+                      </li>
+                      <li class="submenu">
+                        <a href="javascript:void(0);"><span>Base UI</span><span class="menu-arrow"></span></a>
+                        <ul>
+                          <li>
+                            <a href="ui-alerts">Alerts</a>
+                          </li>
+                          <li>
+                            <a href="ui-accordion">Accordion</a>
+                          </li>
+                          <li>
+                            <a href="ui-avatar">Avatar</a>
+                          </li>
+                          <li>
+                            <a href="ui-badges">Badges</a>
+                          </li>
+                          <li>
+                            <a href="ui-borders">Border</a>
+                          </li>
+                          <li>
+                            <a href="ui-buttons">Buttons</a>
+                          </li>
+                          <li>
+                            <a href="ui-buttons-group">Button Group</a>
+                          </li>
+                          <li>
+                            <a href="ui-breadcrumb">Breadcrumb</a>
+                          </li>
+                          <li>
+                            <a href="ui-cards">Card</a>
+                          </li>
+                          <li>
+                            <a href="ui-carousel">Carousel</a>
+                          </li>
+                          <li>
+                            <a href="ui-colors">Colors</a>
+                          </li>
+                          <li>
+                            <a href="ui-dropdowns">Dropdowns</a>
+                          </li>
+                          <li>
+                            <a href="ui-grid">Grid</a>
+                          </li>
+                          <li>
+                            <a href="ui-images">Images</a>
+                          </li>
+                          <li>
+                            <a href="ui-lightbox">Lightbox</a>
+                          </li>
+                          <li>
+                            <a href="ui-media">Media</a>
+                          </li>
+                          <li>
+                            <a href="ui-modals">Modals</a>
+                          </li>
+                          <li>
+                            <a href="ui-offcanvas">Offcanvas</a>
+                          </li>
+                          <li>
+                            <a href="ui-pagination">Pagination</a>
+                          </li>
+                          <li>
+                            <a href="ui-popovers">Popovers</a>
+                          </li>
+                          <li>
+                            <a href="ui-progress">Progress</a>
+                          </li>
+                          <li>
+                            <a href="ui-placeholders">Placeholders</a>
+                          </li>
+                          <li>
+                            <a href="ui-rangeslider">Range Slider</a>
+                          </li>
+                          <li>
+                            <a href="ui-spinner">Spinner</a>
+                          </li>
+                          <li>
+                            <a href="ui-sweetalerts">Sweet Alerts</a>
+                          </li>
+                          <li>
+                            <a href="ui-nav-tabs">Tabs</a>
+                          </li>
+                          <li>
+                            <a href="ui-toasts">Toasts</a>
+                          </li>
+                          <li>
+                            <a href="ui-tooltips">Tooltips</a>
+                          </li>
+                          <li>
+                            <a href="ui-typography">Typography</a>
+                          </li>
+                          <li>
+                            <a href="ui-video">Video</a>
+                          </li>
+                          <li>
+                            <a href="ui-sortable">Sortable</a>
+                          </li>
+                          <li>
+                            <a href="ui-swiperjs">Swiperjs</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="submenu">
+                        <a href="javascript:void(0);"><span>Advanced UI</span><span class="menu-arrow"></span></a>
+                        <ul>
+                          <li>
+                            <a href="ui-ribbon">Ribbon</a>
+                          </li>
+                          <li>
+                            <a href="ui-clipboard">Clipboard</a>
+                          </li>
+                          <li>
+                            <a href="ui-drag-drop">Drag & Drop</a>
+                          </li>
+                          <li>
+                            <a href="ui-rangeslider">Range Slider</a>
+                          </li>
+                          <li>
+                            <a href="ui-rating">Rating</a>
+                          </li>
+                          <li>
+                            <a href="ui-text-editor">Text Editor</a>
+                          </li>
+                          <li>
+                            <a href="ui-counter">Counter</a>
+                          </li>
+                          <li>
+                            <a href="ui-scrollbar">Scrollbar</a>
+                          </li>
+                          <li>
+                            <a href="ui-stickynote">Sticky Note</a>
+                          </li>
+                          <li>
+                            <a href="ui-timeline">Timeline</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="submenu">
+                        <a href="javascript:void(0);"><span>Charts</span><span class="menu-arrow"></span></a>
+                        <ul>
+                          <li>
+                            <a href="chart-apex">Apex Charts</a>
+                          </li>
+                          <li>
+                            <a href="chart-c3">Chart C3</a>
+                          </li>
+                          <li>
+                            <a href="chart-js">Chart Js</a>
+                          </li>
+                          <li>
+                            <a href="chart-morris">Morris Charts</a>
+                          </li>
+                          <li>
+                            <a href="chart-flot">Flot Charts</a>
+                          </li>
+                          <li>
+                            <a href="chart-peity">Peity Charts</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="submenu">
+                        <a href="javascript:void(0);"><span>Icons</span><span class="menu-arrow"></span></a>
+                        <ul>
+                          <li>
+                            <a href="icon-fontawesome">Fontawesome Icons</a>
+                          </li>
+                          <li>
+                            <a href="icon-feather">Feather Icons</a>
+                          </li>
+                          <li>
+                            <a href="icon-ionic">Ionic Icons</a>
+                          </li>
+                          <li>
+                            <a href="icon-material">Material Icons</a>
+                          </li>
+                          <li>
+                            <a href="icon-pe7">Pe7 Icons</a>
+                          </li>
+                          <li>
+                            <a href="icon-simpleline">Simpleline Icons</a>
+                          </li>
+                          <li>
+                            <a href="icon-themify">Themify Icons</a>
+                          </li>
+                          <li>
+                            <a href="icon-weather">Weather Icons</a>
+                          </li>
+                          <li>
+                            <a href="icon-typicon">Typicon Icons</a>
+                          </li>
+                          <li>
+                            <a href="icon-flag">Flag Icons</a>
+                          </li>
+                          <li>
+                            <a href="icon-tabler">Tabler Icons</a>
+                          </li>
+                          <li>
+                            <a href="icon-bootstrap">Bootstrap Icons</a>
+                          </li>
+                          <li>
+                            <a href="icon-remix">Remix Icons</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="submenu">
+                        <a href="javascript:void(0);"><span>Forms</span><span class="menu-arrow"></span></a>
+                        <ul>
+                          <li class="submenu submenu-two">
+                            <a href="javascript:void(0);">Form Elements<span class="menu-arrow inside-submenu"></span></a>
+                            <ul>
+                              <li>
+                                <a href="form-basic-inputs">Basic Inputs</a>
+                              </li>
+                              <li>
+                                <a href="form-checkbox-radios">Checkbox & Radios</a>
+                              </li>
+                              <li>
+                                <a href="form-input-groups">Input Groups</a>
+                              </li>
+                              <li>
+                                <a href="form-grid-gutters">Grid & Gutters</a>
+                              </li>
+                              <li>
+                                <a href="form-select">Form Select</a>
+                              </li>
+                              <li>
+                                <a href="form-mask">Input Masks</a>
+                              </li>
+                              <li>
+                                <a href="form-fileupload">File Uploads</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="submenu submenu-two">
+                            <a href="javascript:void(0);">Layouts<span class="menu-arrow inside-submenu"></span></a>
+                            <ul>
+                              <li>
+                                <a href="form-horizontal">Horizontal Form</a>
+                              </li>
+                              <li>
+                                <a href="form-vertical">Vertical Form</a>
+                              </li>
+                              <li>
+                                <a href="form-floating-labels">Floating Labels</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="form-validation">Form Validation</a>
+                          </li>
+                          <li>
+                            <a href="form-select2">Select2</a>
+                          </li>
+                          <li>
+                            <a href="form-wizard">Form Wizard</a>
+                          </li>
+                          <li>
+                            <a href="form-pickers">Form Picker</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="submenu">
+                        <a href="javascript:void(0);"><span>Tables</span><span class="menu-arrow"></span></a>
+                        <ul>
+                          <li>
+                            <a href="tables-basic">Basic Tables</a>
+                          </li>
+                          <li>
+                            <a href="data-tables">Data Table</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="submenu">
+                        <a href="javascript:void(0);">
+                          <span>Maps</span>
+                          <span class="menu-arrow"></span>
+                        </a>
+                        <ul>
+                          <li>
+                            <a href="maps-vector">Vector</a>
+                          </li>
+                          <li>
+                            <a href="maps-leaflet">Leaflet</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);"><span>Documentation</span></a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);"><span>Changelog v2.2.2</span></a>
+                      </li>
+                      <li class="submenu">
+                        <a href="javascript:void(0);"><span>Multi Level</span><span class="menu-arrow"></span></a>
+                        <ul>
+                          <li>
+                            <a href="javascript:void(0);">Level 1.1</a>
+                          </li>
+                          <li class="submenu submenu-two">
+                            <a href="javascript:void(0);">Level 1.2<span class="menu-arrow inside-submenu"></span></a>
+                            <ul>
+                              <li>
+                                <a href="javascript:void(0);">Level 2.1</a>
+                              </li>
+                              <li class="submenu submenu-two submenu-three">
+                                <a href="javascript:void(0);">Level 2.2<span class="menu-arrow inside-submenu inside-submenu-two"></span></a>
+                                <ul>
+                                  <li>
+                                    <a href="javascript:void(0);">Level 3.1</a>
+                                  </li>
+                                  <li>
+                                    <a href="javascript:void(0);">Level 3.2</a>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="submenu">
+                    <a href="#">
+                      <i class="ti ti-settings-cog"></i><span>Settings</span>
+                      <span class="menu-arrow"></span>
+                    </a>
+                    <ul>
+                      <li class="submenu">
+                        <a href="javascript:void(0);"><span>General Settings</span><span class="menu-arrow"></span></a>
+                        <ul>
+                          <li>
+                            <a href="profile">Profile</a>
+                          </li>
+                          <li>
+                            <a href="security">Security</a>
+                          </li>
+                          <li>
+                            <a href="notifications">Notifications</a>
+                          </li>
+                          <li>
+                            <a href="connected-apps">Connected Apps</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="submenu">
+                        <a href="javascript:void(0);"><span>Website Settings</span><span class="menu-arrow"></span></a>
+                        <ul>
+                          <li>
+                            <a href="company-settings">Company Settings</a>
+                          </li>
+                          <li>
+                            <a href="localization">Localization</a>
+                          </li>
+                          <li>
+                            <a href="prefixes">Prefixes</a>
+                          </li>
+                          <li>
+                            <a href="preference">Preference</a>
+                          </li>
+                          <li>
+                            <a href="appearance">Appearance</a>
+                          </li>
+                          <li>
+                            <a href="language">Language</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="submenu">
+                        <a href="javascript:void(0);"><span>App Settings</span><span class="menu-arrow"></span></a>
+                        <ul>
+                          <li>
+                            <a href="invoice-settings">Invoice Settings</a>
+                          </li>
+                          <li>
+                            <a href="printers">Printers</a>
+                          </li>
+                          <li>
+                            <a href="custom-fields">Custom Fields</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="submenu">
+                        <a href="javascript:void(0);"><span>System Settings</span><span class="menu-arrow"></span></a>
+                        <ul>
+                          <li>
+                            <a href="email-settings">Email Settings</a>
+                          </li>
+                          <li>
+                            <a href="sms-gateways">SMS Gateways</a>
+                          </li>
+                          <li>
+                            <a href="gdpr-cookies">GDPR Cookies</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="submenu">
+                        <a href="javascript:void(0);"><span>Financial Settings</span><span class="menu-arrow"></span></a>
+                        <ul>
+                          <li>
+                            <a href="payment-gateways">Payment Gateways</a>
+                          </li>
+                          <li>
+                            <a href="bank-accounts">Bank Accounts</a>
+                          </li>
+                          <li>
+                            <a href="tax-rates">Tax Rates</a>
+                          </li>
+                          <li>
+                            <a href="currencies">Currencies</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="submenu">
+                        <a href="javascript:void(0);"><span>Other Settings</span><span class="menu-arrow"></span></a>
+                        <ul>
+                          <li>
+                            <a href="storage">Storage</a>
+                          </li>
+                          <li>
+                            <a href="ban-ip-address">Ban IP Address</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- /Horizontal Single -->
+
+        <!-- Nav List -->
+        <li class="nav-item nav-list">
+          <ul class="nav">
+            <li>
+              <div>
+                <a href="#" class="btn btn-icon border btn-menubar btnFullscreen"><i class="ti ti-maximize"></i></a>
+              </div>
+            </li>
+            <li class="dark-mode-list">
+              <a href="javascript:void(0);" id="dark-mode-toggle" class="dark-mode-toggle">
+                <i class="ti ti-sun light-mode active"></i>
+                <i class="ti ti-moon dark-mode"></i>
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="javascript:void(0);" class="btn btn-header-list" data-bs-toggle="dropdown"><i class="ti ti-layout-grid-add"></i></a>
+              <div class="dropdown-menu dropdown-menu-end menus-info">
+                <div class="row">
+                  <div class="col-md-6">
+                    <ul class="menu-list">
+                      <li>
+                        <a href="contacts">
+                          <div class="menu-details">
+                            <span class="menu-list-icon bg-violet"><i class="ti ti-user-up"></i></span>
+                            <div class="menu-details-content">
+                              <p>Contacts</p>
+                              <span>Add New Contact</span>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="pipeline">
+                          <div class="menu-details">
+                            <span class="menu-list-icon bg-green"><i class="ti ti-timeline-event-exclamation"></i></span>
+                            <div class="menu-details-content">
+                              <p>Pipline</p>
+                              <span>Add New Pipline</span>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="activities">
+                          <div class="menu-details">
+                            <span class="menu-list-icon bg-pink"><i class="ti ti-bounce-right"></i></span>
+                            <div class="menu-details-content">
+                              <p>Activities</p>
+                              <span>Add New Activity</span>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="analytics">
+                          <div class="menu-details">
+                            <span class="menu-list-icon bg-info"><i class="ti ti-analyze"></i></span>
+                            <div class="menu-details-content">
+                              <p>Analytics</p>
+                              <span>Shows All Information</span>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="projects">
+                          <div class="menu-details">
+                            <span class="menu-list-icon bg-danger"><i class="ti ti-atom-2"></i></span>
+                            <div class="menu-details-content">
+                              <p>Projects</p>
+                              <span>Add New Project</span>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <ul class="menu-list">
+                      <li>
+                        <a href="deals">
+                          <div class="menu-details">
+                            <span class="menu-list-icon bg-info"><i class="ti ti-medal"></i></span>
+                            <div class="menu-details-content">
+                              <p>Deals</p>
+                              <span>Add New Deals</span>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="leads">
+                          <div class="menu-details">
+                            <span class="menu-list-icon bg-secondary"><i class="ti ti-chart-arcs"></i></span>
+                            <div class="menu-details-content">
+                              <p>Leads</p>
+                              <span>Add New Leads</span>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="companies">
+                          <div class="menu-details">
+                            <span class="menu-list-icon bg-tertiary"><i class="ti ti-building-community"></i></span>
+                            <div class="menu-details-content">
+                              <p>Company</p>
+                              <span>Add New Company</span>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="tasks">
+                          <div class="menu-details">
+                            <span class="menu-list-icon bg-success"><i class="ti ti-list-check"></i></span>
+                            <div class="menu-details-content">
+                              <p>Tasks</p>
+                              <span>Add New Task</span>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="campaign">
+                          <div class="menu-details">
+                            <span class="menu-list-icon bg-purple"><i class="ti ti-brand-campaignmonitor"></i></span>
+                            <div class="menu-details-content">
+                              <p>Campaign</p>
+                              <span>Add New Campaign</span>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="faq" class="btn btn-help"><i class="ti ti-help-hexagon"></i></a>
+            </li>
+            <li class="nav-item">
+              <a href="lead-reports" class="btn btn-chart-pie"><i class="ti ti-chart-pie"></i></a>
+            </li>
+          </ul>
+        </li>
+        <!-- /Nav List -->
+
+        <!-- Chat -->
+        <li class="nav-item nav-item-email nav-item-box">
+          <a href="chat">
+            <i class="ti ti-message-circle-exclamation"></i>
+            <span class="badge rounded-pill">14</span>
+          </a>
+        </li>
+        <!-- /Chat -->
+
+        <!-- Notifications -->
+        <li class="nav-item dropdown nav-item-box">
+          <a href="javascript:void(0);" class="nav-link" data-bs-toggle="dropdown">
+            <i class="ti ti-bell"></i>
+            <span class="badge rounded-pill">13</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-end notification-dropdown">
+            <div class="topnav-dropdown-header">
+              <h4 class="notification-title">Notifications</h4>
+            </div>
+            <div class="noti-content">
+              <ul class="notification-list">
+                <li class="notification-message">
+                  <a href="activities">
+                    <div class="media d-flex">
+                      <span class="avatar flex-shrink-0">
+                        <img src="{% static 'assets/img/profiles/avatar-02.jpg' %}" alt="Profile" />
+                        <span class="badge badge-info rounded-pill"></span>
+                      </span>
+                      <div class="media-body flex-grow-1">
+                        <p class="noti-details">Ray Arnold left 6 comments on Isla Nublar SOC2 compliance report</p>
+                        <p class="noti-time">Last Wednesday at 9:42 am</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="notification-message">
+                  <a href="activities">
+                    <div class="media d-flex">
+                      <span class="avatar flex-shrink-0"><img src="{% static 'assets/img/profiles/avatar-03.jpg' %}" alt="Profile" /></span>
+                      <div class="media-body flex-grow-1">
+                        <p class="noti-details">Denise Nedry replied to Anna Srzand</p>
+                        <p class="noti-sub-details">“Oh, I finished de-bugging the phones, but the system's compiling for eighteen minutes, or twenty. So, some minor systems may go on and off for a while.”</p>
+                        <p class="noti-time">Last Wednesday at 9:42 am</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="notification-message">
+                  <a href="activities">
+                    <div class="media d-flex">
+                      <span class="avatar flex-shrink-0"><img alt="" src="{% static 'assets/img/profiles/avatar-06.jpg' %}" /></span>
+                      <div class="media-body flex-grow-1">
+                        <p class="noti-details">John Hammond attached a file to Isla Nublar SOC2 compliance report</p>
+                        <div class="noti-pdf">
+                          <div class="noti-pdf-icon">
+                            <span><i class="ti ti-chart-pie"></i></span>
+                          </div>
+                          <div class="noti-pdf-text">
+                            <p>EY_review.pdf</p>
+                            <span>2mb</span>
+                          </div>
+                        </div>
+                        <p class="noti-time">Last Wednesday at 9:42 am</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="topnav-dropdown-footer">
+              <a href="activities" class="view-link">View all</a>
+              <a href="javascript:void(0);" class="clear-link">Clear all</a>
+            </div>
+          </div>
+        </li>
+        <!-- /Notifications -->
+
+        <!-- Profile Dropdown -->
+        <li class="nav-item dropdown has-arrow main-drop">
+          <a href="javascript:void(0);" class="nav-link userset" data-bs-toggle="dropdown">
+            <span class="user-info">
+              <span class="user-letter"><img src="{% static 'assets/img/profiles/avatar-20.jpg' %}" alt="Profile" /></span>
+              <span class="badge badge-success rounded-pill"></span>
+            </span>
+          </a>
+          <div class="dropdown-menu menu-drop-user">
+            <div class="profilename">
+              <a class="dropdown-item" href="index"><i class="ti ti-layout-2"></i> Dashboard</a>
+              <a class="dropdown-item" href="profile"><i class="ti ti-user-pin"></i> My Profile</a>
+              <a class="dropdown-item" href="login"><i class="ti ti-lock"></i> Logout</a>
+            </div>
+          </div>
+        </li>
+        <!-- /Profile Dropdown -->
+      </ul>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="dropdown mobile-user-menu">
+      <a href="javascript:void(0);" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="index"><i class="ti ti-layout-2"></i> Dashboard</a>
+        <a class="dropdown-item" href="profile"><i class="ti ti-user-pin"></i> My Profile</a>
+        <a class="dropdown-item" href="login"><i class="ti ti-lock"></i> Logout</a>
+      </div>
+    </div>
+    <!-- /Mobile Menu -->
+  </div>
+  <!-- /Header -->
+{% endblock %}

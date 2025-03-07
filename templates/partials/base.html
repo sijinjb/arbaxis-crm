@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en"
+data-theme="{% if request.path == '/crms/template/layout-dark' %}dark{% else %}light{% endif %}"
+data-layout="{% if request.path == '/crms/template/layout-horizontal-single' %}horizontal-single{% elif request.path == '/crms/template/layout-without-header' %}without-header{% elif request.path == '/crms/template/layout-detached' %}detached{% else %}default{% endif %}">
+{% block head %}
+  {% include 'partials/head.html' %}
+{% endblock %}
+</html>
+
+
+  <body class="{% if request.path == '/crms/template/chat' %}main-chat-blk {% elif request.path == '/crms/template/layout-mini' %}mini-sidebar
+    {% elif request.path == '/crms/template/layout-rtl' %}
+      layout-mode-rtl{% elif request.path == '/crms/template/layout-horizontal-single' %}menu-horizontal{% else %}
+    {% endif %}">
+    {% if request.path == '/crms/template/index' or request.path == '/crms/template/leads-dashboard' or request.path == '/crms/template/project-dashboard' %}
+      <div class="preloader">
+        <span class="loader"></span>
+      </div>
+    {% endif %}
+
+    <div class="main-wrapper">
+      {% block header %}
+        {% include 'partials/topbar.html' %}
+      {% endblock %}
+
+      {% block sidebar %}
+        {% include 'partials/sidebar.html' %}
+      {% endblock %}
+
+      {% block content %}
+
+      {% endblock %}
+    </div>
+
+    {% block javascript %}
+      {% include 'partials/script.html' %}
+    {% endblock %}
+
+    {% block theme_settings %}
+      {% if '/crms/template/layout-rtl' not in request.path and '/crms/template/layout-mini' not in request.path and '/crms/template/layout-dark' not in request.path and '/crms/template/layout-horizontal-single' not in request.path and '/crms/template/layout-without-header' not in request.path and '/crms/template/layout-detached' not in request.path %}
+        {% include 'partials/theme-settings.html' %}
+      {% endif %}
+    {% endblock %}
+  </body>
+</html>
